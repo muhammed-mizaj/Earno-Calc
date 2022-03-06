@@ -13,10 +13,11 @@ class _ExpenseCategoryState extends State<ExpenseCategory> {
         padding: EdgeInsets.all(5),
         itemBuilder: (ctx, index) {
           return Card(
+            color: Colors.blueAccent,
 
             child: ListTile(
               trailing: IconButton(onPressed: () {}, icon: Icon(Icons.delete),)
-              , title: Text("Salary"),
+              , title: Text("Expense"),
 
             ),
           );

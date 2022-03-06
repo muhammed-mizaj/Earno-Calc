@@ -1,4 +1,7 @@
+import 'package:earno_calc/db/category_db.dart';
+import 'package:earno_calc/models/categories/category_model.dart';
 import 'package:earno_calc/screens/category/CategoryScreen.dart';
+import 'package:earno_calc/screens/category/add_popup.dart';
 import 'package:earno_calc/screens/home/widgets/bottom_nav.dart';
 
 import 'package:earno_calc/screens/transactions/transactions.dart';
@@ -15,8 +18,8 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[100],
-        appBar: AppBar(title: Text("Earno Calc"),centerTitle: true,),
+      backgroundColor: Colors.blueGrey[800],
+        appBar: AppBar(title: Text("Earno Calc"),centerTitle: true,backgroundColor: Colors.grey[900],),
         bottomNavigationBar: const Bottomnavwid(),
         body:SafeArea(
           child: ValueListenableBuilder(
@@ -27,6 +30,8 @@ class MainScreen extends StatelessWidget {
           ),
         ),
       floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.lightGreen,
+        backgroundColor: Colors.blue[900],
         child: Icon(Icons.add),
         onPressed: (){
           if(selectedIndexNotifier.value==0)
@@ -36,6 +41,14 @@ class MainScreen extends StatelessWidget {
           else
           {
             print("add something");
+            CategoryAddPopup(context);
+            // final _sample = Categorymodel(
+            //   id:DateTime.now().millisecondsSinceEpoch.toString(),
+            //   name:"Food",
+            //   type: CategoryType.expense
+            //
+            // );
+            // CategoryDB().insertCategory(_sample);
 
           }
         },

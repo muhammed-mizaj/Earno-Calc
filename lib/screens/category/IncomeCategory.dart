@@ -13,7 +13,7 @@ class _Income_CategoryState extends State<Income_Category> {
       padding: EdgeInsets.all(5),
         itemBuilder:(ctx,index){
       return Card(
-        
+          color: Colors.blue[600],
         child: ListTile(
           trailing: IconButton(onPressed: (){},icon: Icon(Icons.delete),)
           ,title: Text("Salary"),
