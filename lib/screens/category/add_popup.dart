@@ -1,7 +1,9 @@
+import 'package:earno_calc/db/category_db.dart';
 import 'package:earno_calc/models/categories/category_model.dart';
 import 'package:flutter/material.dart';
 ValueNotifier<CategoryType> selectedCategoryNotifier = ValueNotifier(CategoryType.income);
 Future <void> CategoryAddPopup(BuildContext context) async{
+  final _nameController = TextEditingController();
   showDialog(context: context,
       builder:(ctx){
         return SimpleDialog(
@@ -26,6 +28,7 @@ Future <void> CategoryAddPopup(BuildContext context) async{
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: TextFormField(
+                controller: _nameController,
                 decoration: InputDecoration(
                   hintText: 'Category Name',
                   border: OutlineInputBorder(
@@ -35,7 +38,19 @@ Future <void> CategoryAddPopup(BuildContext context) async{
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
-              child: ElevatedButton(onPressed: (){}, child: Text("Add")),
+              child: ElevatedButton(onPressed: (){
+                final _name = _nameController.text;
+                if(_name.isEmpty)
+                  {
+                    return;
+                  }
+                final _type= selectedCategoryNotifier.value;
+                final _category = Categorymodel(name: _name, type: _type, id: DateTime.now().microsecondsSinceEpoch.toString(),
+                );
+                CategoryDB.instance.insertCategory(_category);
+                Navigator.of(ctx).pop();
+
+              }, child: Text("Add")),
             )
           ],
         );

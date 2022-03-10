@@ -30,6 +30,9 @@ dependencies:
   hive: ^2.0.6
   hive_flutter: ^1.1.0
   hive_generator: ^1.1.2
+  intl: ^0.17.0
+  flutter_slidable: 1.2.0
+
   flutter:
     sdk: flutter
 

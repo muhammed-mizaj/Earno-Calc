@@ -3,6 +3,7 @@ import 'package:earno_calc/models/categories/category_model.dart';
 import 'package:earno_calc/screens/category/CategoryScreen.dart';
 import 'package:earno_calc/screens/category/add_popup.dart';
 import 'package:earno_calc/screens/home/widgets/bottom_nav.dart';
+import 'package:earno_calc/screens/transactions/add_transaction_page.dart';
 
 import 'package:earno_calc/screens/transactions/transactions.dart';
 import 'package:flutter/foundation.dart';
@@ -34,9 +35,10 @@ class MainScreen extends StatelessWidget {
         backgroundColor: Colors.blue[900],
         child: Icon(Icons.add),
         onPressed: (){
-          if(selectedIndexNotifier.value==0)
+          if(selectedIndexNotifier.value==1)
           {
               print("Add transactions");
+              Navigator.of(context).pushNamed(Add_Transaction.routeName);
           }
           else
           {

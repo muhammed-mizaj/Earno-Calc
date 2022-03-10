@@ -18,9 +18,7 @@ class _CategoryScreenState extends State<CategoryScreen> with TickerProviderStat
     super.initState();
 
     _tabController = TabController(length:2, vsync:this);
-    CategoryDB().getCategories().then((value){
-      print(value.toString());
-    });
+    CategoryDB().refreshUI();
   }
   @override
   Widget build(BuildContext context) {

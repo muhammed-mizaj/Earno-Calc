@@ -1,3 +1,5 @@
+import 'package:earno_calc/db/category_db.dart';
+import 'package:earno_calc/models/categories/category_model.dart';
 import 'package:flutter/material.dart';
 class ExpenseCategory extends StatefulWidget {
   const ExpenseCategory({Key? key}) : super(key: key);
@@ -9,22 +11,29 @@ class ExpenseCategory extends StatefulWidget {
 class _ExpenseCategoryState extends State<ExpenseCategory> {
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-        padding: EdgeInsets.all(5),
-        itemBuilder: (ctx, index) {
-          return Card(
-            color: Colors.blueAccent,
+    return ValueListenableBuilder(valueListenable: CategoryDB().expenseCategoryListListener,
+        builder: (BuildContext ctx,List<Categorymodel> newList,Widget? _){
+      return ListView.separated(
+          padding: EdgeInsets.all(5),
+          itemBuilder: (ctx, index) {
+            final category = newList[index];
+            return Card(
+              color: Colors.blueAccent,
 
-            child: ListTile(
-              trailing: IconButton(onPressed: () {}, icon: Icon(Icons.delete),)
-              , title: Text("Expense"),
+              child: ListTile(
+                leading: Icon(Icons.wrong_location_outlined,color: Colors.red),
+                trailing: IconButton(onPressed: () {
+                  CategoryDB.instance.deleteCategory(category.id);
+                }, icon: Icon(Icons.delete),)
+                , title: Text(category.name),
 
-            ),
-          );
-        },
-        separatorBuilder: (ctx, index) {
-          return SizedBox(height: 10);
-        },
-        itemCount: 10);
+              ),
+            );
+          },
+          separatorBuilder: (ctx, index) {
+            return SizedBox(height: 10);
+          },
+          itemCount: newList.length);
+    });
   }
 }
