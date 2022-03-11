@@ -1,10 +1,10 @@
-![bg](./pics/bg.png)
+![bg](./pics/tinkerbg.png)
 
 # **Earno Calc**
 
 
 <div align="center">
-  <img src="./pics/logo_icon.png" width=250>
+  <img src="./pics/logo.png" width=250>
 </div>
 
 Earno_calc is an app to help people  manage their finances, by keeping track of your transactions, here.
