@@ -1,4 +1,4 @@
-# earno_calc
+# Earno_calc
 
 
 Earno_calc is an app to help people  manage their finances, by keeping track of your transactions, here.
@@ -61,3 +61,4 @@ After configuration run the following command with your device connected on
 flutter run --no-sound-null-safety
 ```
 (First, you should read through the guide to [understand unsound null safety.](https://dart.dev/null-safety/unsound-null-safety) If you are sure that you want to run your application with unsound null safety, you can use the following command:)
+You can download it here (https://drive.google.com/drive/folders/1Cb_3nJWqyqaztFK_Dee9xQP132PUpcf6?usp=sharing)
