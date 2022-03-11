@@ -9,13 +9,11 @@ you can also customise the category of transaction.
 
 U can sign in to the app, and create your own profile
 <h3>Features</h3>
-*User can Income Category
-*User can Expense Category
-*User can each transaction by describing purpose,date,amount,category type,category
-*Show Red icon on list for expense transactions.
-*Show Green icon on list for income transactions.
-*Eye Catching UI 
-*user profile
+ - User can Income Category
+ - User can Expense Category
+ - User can each transaction by describing purpose,date,amount,category type,category
+ - Show Red icon on list for expense transactions.
+ - Show Green icon on list for income transactions.
 
 ##Team Members
 1. [Muhammed](https://github.com/mdthegamer)
@@ -28,13 +26,12 @@ Flutter / 41
 [Code Explanation + Demo](link)
 
 ## How it Works ?
-1. From a TextField widget - accepting a text from the user
+1. From a TextField widget - Add Income Category
 
-2. Passing the text to a morse code encoder using the morse package
+2.From a Textfield widget - Add Expense Category
 
-3. Storing & Displaying the converted code to the app
+3.User can each transaction by describing purpose,date,amount,category type,category
 
-4. Encoded message is then read character by character and flashlight is seen according to the morse code using torch_light package
 
 ## Packages Used
 
