@@ -13,7 +13,7 @@ Likewise, you can also add your income
 The list of all your expenses and income will be displayed here
 you can also customise the category of transaction.
 
-U can sign in to the app, and create your own profile
+U can sign in to the app, and create your own profile or use as guest
 <h3>Features</h3>
  - User can Income Category
  - User can Expense Category
@@ -37,6 +37,10 @@ Flutter / 41
 2.From a Textfield widget - Add Expense Category
 
 3.User can each transaction by describing purpose,date,amount,category type,category
+
+4. All the data are stored in a local database called Hive
+
+5.Stateful widgets and Notify Listener widgets are used for dynamic data transfer 
 
 
 ## Packages Used
