@@ -40,7 +40,7 @@ class TransactionPage extends StatelessWidget {
                       backgroundColor: _value.type==CategoryType.income? Colors.green[700]:Colors.red[700],
                       ),
                       title: Text('Rs ${_value.amount}'),
-                      subtitle: Text(_value.category.name),
+                      subtitle: Text(_value.category.name+":"+_value.Purpose),
                     ),
                   ),
                 );
