@@ -29,7 +29,7 @@ U can sign in to the app, and create your own profile or use as guest
 Flutter / 41
 
 ## Link to product walkthrough
-[Code Explanation + Demo](link)
+[Code Explanation + Demo](https://drive.google.com/file/d/1T_HTkQAixqptdfdiOMTmu0kcKrOn5y30/view)
 
 ## How it Works ?
 1. From a TextField widget - Add Income Category
