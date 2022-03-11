@@ -177,6 +177,7 @@ class _Add_TransactionState extends State<Add_Transaction> {
   Future<void> addTransaction() async{
    final _purpose_text=_purposeTexteditingcontroller.text;
    final _amount_text=_amountTexteditingcontroller.text;
+
    if(_purpose_text.isEmpty)
      {
        return;
@@ -194,6 +195,7 @@ class _Add_TransactionState extends State<Add_Transaction> {
        return;
      }
    final _parsedAmount = double.tryParse(_amount_text);
+
    if(_parsedAmount==null)
      {
        return;

@@ -1,3 +1,5 @@
+import 'package:earno_calc/db/transaction_db.dart';
+import 'package:earno_calc/screens/home/widgets/total.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class Profile_page extends StatefulWidget {
@@ -85,7 +87,6 @@ class _Profile_pageState extends State<Profile_page> {
                   ),
 
                 ],)
-
 
 
               ],

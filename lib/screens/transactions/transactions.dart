@@ -14,6 +14,8 @@ class TransactionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     TransactionDB.instance.RefreshTransactionUI();
     CategoryDB.instance.refreshUI();
+    // final double Income = TransactionDB.instance.getAllExpenseTransaction() as double;
+
     return ValueListenableBuilder(
         valueListenable: TransactionDB.instance.transactionListNotifier,
         builder: (BuildContext ctx, List<TransactionModel> newList, Widget? _){
@@ -40,7 +42,7 @@ class TransactionPage extends StatelessWidget {
                       backgroundColor: _value.type==CategoryType.income? Colors.green[700]:Colors.red[700],
                       ),
                       title: Text('Rs ${_value.amount}'),
-                      subtitle: Text(_value.category.name+":"+_value.Purpose),
+                      subtitle: Text(_value.category.name+" : "+_value.Purpose),
                     ),
                   ),
                 );
@@ -59,4 +61,8 @@ class TransactionPage extends StatelessWidget {
     final _formatedDate = _date.split(' ');
     return '  ${_formatedDate.last}\n${_formatedDate.first}';
   }
+
+
+
+
 }
