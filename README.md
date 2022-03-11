@@ -1,5 +1,11 @@
-# Earno_calc
+![bg](./pics/bg.png)
 
+# **Earno Calc**
+
+
+<div align="center">
+  <img src="./pics/logo_icon.png" width=250>
+</div>
 
 Earno_calc is an app to help people  manage their finances, by keeping track of your transactions, here.
 You can feed in the purpose, the amt , the date of transaction and category of transaction (for efficient management).
