@@ -28,17 +28,27 @@ Future <void> CategoryAddPopup(BuildContext context) async{
             Padding(
               padding: const EdgeInsets.all(5.0),
               child: TextFormField(
+                cursorColor: Colors.black,
                 controller: _nameController,
                 decoration: InputDecoration(
                   hintText: 'Category Name',
+                  focusedBorder: OutlineInputBorder(
+
+                      borderRadius:BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.black)
+                  ),
                   border: OutlineInputBorder(
+                    borderRadius:BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.black)
                   )
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(5.0),
-              child: ElevatedButton(onPressed: (){
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: Colors.black),
+                  onPressed: (){
                 final _name = _nameController.text;
                 if(_name.isEmpty)
                   {
@@ -51,6 +61,7 @@ Future <void> CategoryAddPopup(BuildContext context) async{
                 Navigator.of(ctx).pop();
 
               }, child: Text("Add")),
+
             )
           ],
         );
@@ -71,6 +82,7 @@ class RadioButton extends StatelessWidget {
         ValueListenableBuilder(valueListenable: selectedCategoryNotifier,
             builder: (BuildContext ctx,CategoryType newCatgory,Widget? _){
               return Radio<CategoryType>(
+                  fillColor: MaterialStateProperty.all(Colors.black),
                   value: type,
                   groupValue: selectedCategoryNotifier.value,
                   onChanged: (value){

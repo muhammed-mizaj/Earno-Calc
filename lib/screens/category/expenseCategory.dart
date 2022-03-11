@@ -18,10 +18,10 @@ class _ExpenseCategoryState extends State<ExpenseCategory> {
           itemBuilder: (ctx, index) {
             final category = newList[index];
             return Card(
-              color: Colors.blueAccent,
-
+              color: Color.fromRGBO(200, 248, 255, 0.7),
+              elevation: 20,
               child: ListTile(
-                leading: Icon(Icons.wrong_location_outlined,color: Colors.red),
+                leading: Icon(Icons.account_balance_wallet_rounded,color: Colors.red),
                 trailing: IconButton(onPressed: () {
                   CategoryDB.instance.deleteCategory(category.id);
                 }, icon: Icon(Icons.delete),)

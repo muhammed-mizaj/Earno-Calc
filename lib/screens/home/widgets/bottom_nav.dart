@@ -10,8 +10,9 @@ class Bottomnavwid extends StatelessWidget {
       builder: (BuildContext ctx ,int updatedIndex,Widget? _){
 
         return BottomNavigationBar(
-          selectedItemColor: Colors.blue,
-          unselectedItemColor: Colors.black,
+          elevation: 15,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.blueGrey,
           currentIndex: updatedIndex,
           onTap:(newIndex)
           {
@@ -19,11 +20,12 @@ class Bottomnavwid extends StatelessWidget {
           },
 
           items:const [
-            BottomNavigationBarItem(icon: Icon(Icons.home),
-                label: "Expenses"),
-            BottomNavigationBarItem(icon: Icon(Icons.category),
+            BottomNavigationBarItem(icon: Icon(Icons.money),
                 label: "Transactions"
-            )
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.category_rounded),
+                label: "Categories"),
+
           ],);
       },
 

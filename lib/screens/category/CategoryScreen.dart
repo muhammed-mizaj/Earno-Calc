@@ -31,9 +31,9 @@ class _CategoryScreenState extends State<CategoryScreen> with TickerProviderStat
           tabs: [
           Tab(text: 'Income',),
           Tab(text:'Expense'),
-        ],labelColor: Colors.yellow[900],
+        ],labelColor: Colors.black,
         unselectedLabelColor: Colors.blueGrey,
-        indicatorColor: Colors.red[900],),
+        indicatorColor: Colors.black,),
 
         Expanded(
           child: TabBarView(

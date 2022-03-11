@@ -33,9 +33,11 @@ class TransactionPage extends StatelessWidget {
 
                   ),
                   child: Card(
+                    color:Color.fromRGBO(180, 248, 255, 0.7),
+                    elevation: 5,
                     child: ListTile(
-                      leading: CircleAvatar(child: Text(parseDate(_value.date)),radius: 50,
-                      backgroundColor: _value.type==CategoryType.income? Colors.green[200]:Colors.red[200],
+                      leading: CircleAvatar(child: Text(parseDate(_value.date),style: TextStyle(fontWeight: FontWeight.bold),),foregroundColor: Colors.black,radius: 25,
+                      backgroundColor: _value.type==CategoryType.income? Colors.green[700]:Colors.red[700],
                       ),
                       title: Text('Rs ${_value.amount}'),
                       subtitle: Text(_value.category.name),

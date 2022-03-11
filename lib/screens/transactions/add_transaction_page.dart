@@ -3,6 +3,7 @@ import 'package:earno_calc/db/transaction_db.dart';
 import 'package:earno_calc/models/categories/category_model.dart';
 import 'package:earno_calc/models/transactions/transaction_model.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 class Add_Transaction extends StatefulWidget {
   static const routeName = 'add-transaction';
   const Add_Transaction({Key? key}) : super(key: key);
@@ -31,21 +32,52 @@ class _Add_TransactionState extends State<Add_Transaction> {
        padding: const EdgeInsets.all(8.0),
        child: Column(
         children:[
-          TextFormField(
-            controller: _purposeTexteditingcontroller,
-            decoration: InputDecoration(
-              hintText: "Purpose"
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              cursorColor: Colors.black,
+
+              controller: _purposeTexteditingcontroller,
+              decoration: InputDecoration(
+                hintText: "Purpose",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.black)
+
+
+                ),
+              ),
+
             ),
           ),
-          TextFormField(
-            controller: _amountTexteditingcontroller,
-            decoration: InputDecoration(
-              hintText: 'Amount',
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              cursorColor: Colors.black,
+
+              controller: _amountTexteditingcontroller,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10)
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.black)
+
+
+                ),
+                hintText: 'Amount',
+              ),
+              keyboardType: TextInputType.number,
             ),
-            keyboardType: TextInputType.number,
           ),
 
           TextButton.icon(onPressed: ()async {
+
           final _selectedDatetemp = await showDatePicker(context: context,
                 initialDate: DateTime.now(),
                 firstDate: DateTime.now().subtract(Duration(days: 30)),
@@ -62,8 +94,8 @@ class _Add_TransactionState extends State<Add_Transaction> {
 
             }
           },
-              icon:Icon(Icons.calendar_today),
-            label: Text(_selectedDate==null?("Select date"):(_selectedDate.toString())),
+              icon:Icon(Icons.calendar_today,color: Colors.black,),
+            label: Text(_selectedDate==null?("Select date"):(DateFormat('dd-MM-yyyy').format(_selectedDate!) ),style: TextStyle(color: Colors.black),),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -71,6 +103,9 @@ class _Add_TransactionState extends State<Add_Transaction> {
               Row(
                 children:[
                   Radio(
+                    hoverColor: Colors.black,
+                      fillColor: MaterialStateProperty.all(Colors.black),
+
                       value: CategoryType.income,
                       groupValue: _selectedCategorytype,
                       onChanged: (newvalue){
@@ -85,6 +120,8 @@ class _Add_TransactionState extends State<Add_Transaction> {
               Row(
                 children:[
                   Radio(
+                      hoverColor: Colors.black,
+                      fillColor: MaterialStateProperty.all(Colors.black),
                       value: CategoryType.expense,
                       groupValue: _selectedCategorytype,
                       onChanged: (newvalue){
@@ -100,7 +137,12 @@ class _Add_TransactionState extends State<Add_Transaction> {
             ],
           ),
           DropdownButton(
+            borderRadius: BorderRadius.circular(5),
             value: _categoryId,
+            elevation: 16,
+            style: TextStyle(
+              color: Colors.black
+            ),
             hint:const Text("Select category"),
 
               items:
@@ -121,8 +163,11 @@ class _Add_TransactionState extends State<Add_Transaction> {
             },
           ),
           ElevatedButton.icon(onPressed: (){
+
                     addTransaction();
-          }, icon: Icon(Icons.add), label: Text("Add Transaction"))
+          }, icon: Icon(Icons.add), label: Text("Add Transaction"),
+              style: ElevatedButton.styleFrom(primary: Colors.black,shadowColor: Colors.blueGrey),
+              )
           ]
     ),
      )

@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       title: 'Flutter Demo',
-           theme: ThemeData.dark(),
+           theme: ThemeData.light(),
 
     home: MainScreen(),
       routes: {
