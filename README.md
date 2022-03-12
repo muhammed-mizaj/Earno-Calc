@@ -13,7 +13,7 @@ Likewise, you can also add your income
 The list of all your expenses and income will be displayed here
 you can also customise the category of transaction.
 
-U can sign in to the app, and create your own profile or use as guest
+You can sign in to the app, and create your own profile or use as guest
 <h3>Features</h3>
 
 - User can Income Category
@@ -73,3 +73,8 @@ flutter run --no-sound-null-safety
 ```
 (First, you should read through the guide to [understand unsound null safety.](https://dart.dev/null-safety/unsound-null-safety) If you are sure that you want to run your application with unsound null safety, you can use the following command:)
 You can download it here (https://drive.google.com/drive/folders/1Cb_3nJWqyqaztFK_Dee9xQP132PUpcf6?usp=sharing)
+## Screenshots
+  <img src="./pics/ss/transaction.jpeg" width=250>  <img src="./pics/ss/expense_cat.jpeg" width=250>  <img src="./pics/ss/income_cat.jpeg" width=250>
+  
+  
+  <img src="./pics/ss/add_cat.jpeg" width=250>  <img src="./pics/ss/add _transaction.jpeg" width=250>  <img src="./pics/ss/drawer.jpeg" width=250>
