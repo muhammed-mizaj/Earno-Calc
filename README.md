@@ -13,13 +13,14 @@ Likewise, you can also add your income
 The list of all your expenses and income will be displayed here
 you can also customise the category of transaction.
 
-U can sign in to the app, and create your own profile
+U can sign in to the app, and create your own profile or use as guest
 <h3>Features</h3>
- - User can Income Category
- - User can Expense Category
- - User can each transaction by describing purpose,date,amount,category type,category
- - Show Red icon on list for expense transactions.
- - Show Green icon on list for income transactions.
+
+- User can Income Category
+- User can Expense Category
+- User can each transaction by describing purpose,date,amount,category type,category
+- Show Red icon on list for expense transactions.
+- Show Green icon on list for income transactions.
 
 ##Team Members
 1. [Muhammed](https://github.com/mdthegamer)
@@ -29,7 +30,7 @@ U can sign in to the app, and create your own profile
 Flutter / 41
 
 ## Link to product walkthrough
-[Code Explanation + Demo](link)
+[Code Explanation + Demo](https://drive.google.com/file/d/1T_HTkQAixqptdfdiOMTmu0kcKrOn5y30/view)
 
 ## How it Works ?
 1. From a TextField widget - Add Income Category
@@ -37,6 +38,10 @@ Flutter / 41
 2.From a Textfield widget - Add Expense Category
 
 3.User can each transaction by describing purpose,date,amount,category type,category
+
+4. All the data are stored in a local database called Hive
+
+5.Stateful widgets and Notify Listener widgets are used for dynamic data transfer 
 
 
 ## Packages Used
