@@ -27,7 +27,7 @@ You can sign in to the app, and create your own profile or use as guest
 2. [Sufail Sha](https://github.com/SUFAILSHA5009)
 
 ## Team Id
-Flutter / 41
+Flutter /41
 
 ## Link to product walkthrough
 [Code Explanation + Demo](https://drive.google.com/file/d/1T_HTkQAixqptdfdiOMTmu0kcKrOn5y30/view)
