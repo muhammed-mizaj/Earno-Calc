@@ -16,9 +16,9 @@ you can also customise the category of transaction.
 You can sign in to the app, and create your own profile or use as guest
 <h3>Features</h3>
 
-- User can Income Category
-- User can Expense Category
-- User can each transaction by describing purpose,date,amount,category type,category
+- User can add Income Category
+- User can add Expense Category
+- User can add each transaction by describing purpose,date,amount,category type,category
 - Show Red icon on list for expense transactions.
 - Show Green icon on list for income transactions.
 
